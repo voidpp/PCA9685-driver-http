@@ -1,0 +1,42 @@
+{
+    "devices": {
+        "lamp": {
+            "address": 64,
+            "bus": 1
+        }
+    },
+    "logger": {
+        "disable_existing_loggers": false,
+        "formatters": {
+            "standard": {
+                "format": "%(asctime)s - %(levelname)s - %(name)s - %(filename)s:%(lineno)d: %(message)s"
+            }
+        },
+        "handlers": {
+            "console": {
+                "class": "logging.StreamHandler",
+                "formatter": "standard",
+                "level": "DEBUG"
+            },
+            "file": {
+                "class": "logging.handlers.RotatingFileHandler",
+                "formatter": "standard",
+                "level": "DEBUG",
+                "filename": "/tmp/pca9685-driver-http.log",
+                "maxBytes": 10485760,
+                "backupCount": 20,
+                "encoding": "utf8"
+            }
+        },
+        "loggers": {
+            "pca9685_driver_http": {
+                "handlers": [
+                    "console"
+                ],
+                "level": "DEBUG",
+                "propagate": true
+            }
+        },
+        "version": 1
+    }
+}
