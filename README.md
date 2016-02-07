@@ -17,3 +17,6 @@ processes = 2
 module = pca9685_driver_http.app:app
 http-socket = :52042
 ```
+The default user of the uwsgi process is `www-data`, so need to add the `www-data` user to the `i2c` group.
+
+For example: `usermod -G i2c -a www-data`
