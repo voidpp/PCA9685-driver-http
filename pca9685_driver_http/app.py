@@ -19,6 +19,7 @@ devices = {}
 
 for name, conf in config['devices'].items():
     devices[name] = Device(conf['address'], conf['bus'])
+    devices[name].wake()
     logger.info("PCA9685 device created on address %s in bus #%s" % (conf['address'], conf['bus']))
 
 from .controllers import *
