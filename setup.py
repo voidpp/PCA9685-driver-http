@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name = "PCA9685-driver-http",
     description = "Web interface for PCA9685 pwm (LED/Servo) controller",
-    version = "1.0.1",
+    version = "1.0.2",
     author = 'Lajos Santa',
     author_email = 'santa.lajos@coldline.hu',
     url = 'https://github.com/voidpp/PCA9685-driver-http.git',
